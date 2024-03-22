@@ -29,6 +29,12 @@ public class ControleBonus {
         }
     }
 
+    // Faltou o Método - Que adiciona objetos na lista!
+    public void adicionarBeneficiario(Bonus beneficiario) {
+        listaBeneficiarios.add(beneficiario);
+    }
+
+
     // Getters e Setters
     public List<Bonus> getListaBeneficiarios() {
         return listaBeneficiarios;
@@ -37,4 +43,16 @@ public class ControleBonus {
     public void setListaBeneficiarios(List<Bonus> listaBeneficiarios) {
         this.listaBeneficiarios = listaBeneficiarios;
     }
+
+
+    // Deveria ter o toString aqui!
+    @Override
+    public String toString() {
+        return String.format("""
+                Class ControleBonus
+                Lista de Beneficiários: %s
+                Total Gasto: %.2f
+                """, this.listaBeneficiarios, this.calculaTotalGasto());
+    }
+
 }
